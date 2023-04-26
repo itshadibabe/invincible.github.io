@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INVINCIBLE</title>
+    <style>
+   @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+    box-sizing: border-box;
+  }
+
+  body{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(46, 68, 68);
+    min-height: 100vh;
+    
+  }
+  .container{
+    height: 256px;
+    width: 256px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  .container span {
+    position: absolute;
+    left: 0;
+    width: 32px;
+    height: 6px;
+    background: #174050;
+    border-radius: 8px;
+    transform-origin: 128px;
+    transform: scale(2.2) rotate(calc(var(--i) * (360deg / 50)));
+    animation: animateBlink 3s linear infinite;
+    animation-delay: calc(var(--i) * (3s / 50));
+  }
+  @keyframes animateBlink {
+    0% {
+      background: #008cff;
+      box-shadow: 0px 0px 5px rgb(0, 195, 255);
+    }
+
+    25% {
+      background: #173550;
+      box-shadow: 0px 0px 1px rgb(0, 119, 255);
+    }
+  }
+
+  .login-box {
+    position: absolute;
+    width: 400px;
+  }
+
+  .login-box form {
+    width: 100%;
+    padding: 0 50px;
+  }
+
+  h2 {
+    font-size: 2em;
+    color: #00eeff;
+    text-align: center;
+  }
+
+  .input-box {
+    position: relative;
+    margin: 25px 0;
+  }
+
+  .input-box input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #174c50;
+    outline: none;
+    border-radius: 40px;
+    font-size: 1em;
+    color: #fff;
+    padding: 0 20px;
+    transition: .5s;
+  }
+
+  .input-box input:focus,
+  .input-box input:valid {
+    border-color: #00e1ff;
+  }
+
+  .input-box label {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s ease;
+  }
+
+  .input-box input:focus~label,
+  .input-box input:valid~label {
+    top: 1px;
+    font-size: .8em;
+    background-color: #585858;
+    padding: 0 6px;
+    color: #00fff2;
+    border-radius: 20px;
+  }
+
+  .forgot-password {
+    margin: -17px 0 100px;
+   
+  }
+
+  .forgot-password a {
+    font-size: 1em;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+  }
+
+
+  .forgot-password a:hover {
+    text-decoration: inherit;
+  }
+
+.register{
+    margin: -35px 0 15px;
+    text-align: end;
+}
+.register a{
+    font-size: 1em;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.register a:hover{
+    text-decoration: inherit;
+    padding: 3em;
+}
+.login-here{
+  margin: -33px 0 10px;
+  text-align: end;
+}
+.login-here a{
+  font-size: 1em;
+  color: #fff;
+  text-decoration: none;
+}
+.login-here a:hover{
+  text-decoration: inherit;
+  padding: 30px;
+}
+.account{
+  margin: -15px 0 10px;
+  text-align: start;
+}
+.account a{
+  font-size: 1em;
+  color: #fff;
+  text-decoration: none;
+}
+.account a:hover{
+  text-decoration: inherit;
+}
+  .btn {
+    width: 100%;
+    height: 31px;
+    border-radius: 12px;
+    background: #00ccff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    color: #FFF;
+    font-weight: 600;
+    padding: px;
+  }
+  * {
+    margin: 0;
+    padding: 0em;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 98.5%;
+  }
+  
+  body {
+    background-color: #18122b;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    
+  }
+  
+  .neon {
+    background-color: #18122b;
+    border-radius: 0px;
+    position: relative;
+    padding: 56px;
+  }
+  
+  .neon::after,
+  .neon::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 0.5rem;
+    background: -webkit-linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+    background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+    animation: gradientanimation 2s linear infinite;
+  }
+  
+  @keyframes gradientanimation {
+    0% {
+      filter: hue-rotate(0) blur(0.5rem);
+    }
+    100% {
+      filter: hue-rotate(360deg) blur(0.5rem);
+    }
+  }
+  
+    </style>
+</head>
+<body>
+    <div class="neon">
+        <div class="container">
+            <div class="loginbox">
+                <h2>MR.INVINCIBLE</h2>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
